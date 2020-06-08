@@ -1,4 +1,3 @@
-"use strict";
 var Ejercicio7 = /** @class */ (function () {
     function Ejercicio7() {
         this.ejercicio7();
@@ -40,3 +39,4 @@ var Ejercicio7 = /** @class */ (function () {
     return Ejercicio7;
 }());
 new Ejercicio7();
+//# sourceMappingURL=ejercicio7.js.map

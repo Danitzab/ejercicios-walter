@@ -1,5 +1,4 @@
 class Ejercicio8 {
-  
   constructor() {
     this.ejercicio8([1, 3, 0, 5, 0, 1.6, 9]);
   }
@@ -13,16 +12,16 @@ class Ejercicio8 {
     let promedioDeNotas = 0;
     let notaMinima = 0;
 
-    for (let i = 0; i < notas.length; i++) {
-      notasTotales += notas[i];
+    notas.forEach((element: number, i: number) => {
+      notasTotales += element;
       if (i === 0) {
-        notaMinima = notas[i];
+        notaMinima = element;
       } else {
-        if (notas[i] < notaMinima) {
-          notaMinima = notas[i];
+        if (element < notaMinima) {
+          notaMinima = element;
         }
       }
-    }
+    });
     promedioDeNotas = notasTotales / notas.length;
     console.log('La media de las notas de los estudiantes es: ', promedioDeNotas);
     console.log('La nota mas baja es:', notaMinima);
@@ -30,3 +29,6 @@ class Ejercicio8 {
 }
 
 new Ejercicio8();
+
+// for (let i = 0; i < notas.length; i++) {
+//   }

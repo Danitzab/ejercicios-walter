@@ -10,3 +10,4 @@ var formatCurrency = function (number, fractionDigits) {
     return "" + formatted;
 };
 exports.formatCurrency = formatCurrency;
+//# sourceMappingURL=number-util.js.map

@@ -1,3 +1,5 @@
+import {shuffle} from './array-util'
+
 /**
  * 4) Un zoólogo pretende determinar el porcentaje de animales que hay en las siguientes
  * tres categorías de edades: bebes de 0 a 1 año, joven de más de 1 año y menos de 3, y adultos de 3 o más años.
@@ -7,9 +9,9 @@
  */
 class Ejercicio11 {
   // Categorias
-  ELEFANTE = 'elefantico';
-  JIRAFA = 'jirafa';
-  CHIMPANCE = 'chimpance';
+  ELEFANTE = 'ELEFANTE';
+  JIRAFA = 'JIRAFA';
+  CHIMPANCE = 'CHIMPANCE';
 
   animales: Animal[] = [
     {
@@ -67,41 +69,75 @@ class Ejercicio11 {
   chimpances: Animal[] = this.animales.filter((animales: Animal) => animales.tipo === this.CHIMPANCE);
 
   constructor() {
-    this.generarReporte(this.CHIMPANCE, 2);
+    this.generarReporte(this.ELEFANTE, 2);
   }
 
-  generarReporte(categoría: string, cantidadMuestras: number): void {
-    switch (categoría) {
+  generarReporte(categoria: string, cantidadMuestras: number): void {
+    switch (categoria) {
       case this.ELEFANTE:
-        this.generarReporteEdad(this.elefantes);
+        this.generarReporteEdad(this.elefantes, cantidadMuestras, this.ELEFANTE);
         break;
       case this.JIRAFA:
-        this.generarReporteEdad(this.jirafas);
+        this.generarReporteEdad(this.jirafas, cantidadMuestras, this.JIRAFA);
         break;
       case this.CHIMPANCE:
-        this.generarReporteEdad(this.chimpances);
+        this.generarReporteEdad(this.chimpances, cantidadMuestras, this.CHIMPANCE);
         break;
       default:
-        console.log("No es valido el animal"); 
-      break;
+        console.log('No es valido el animal');
+        break;
     }
   }
 
-  generarReporteEdad(animales: Animal[]): void {
+  generarReporteEdad(animales: Animal[], cantidadMuestras: number, categoria: string): void {
     let contBebes = 0;
     let contJovenes = 0;
     let contAdultos = 0;
 
-    console.log(animales);
-    animales.forEach((element: Animal) => {
-      if (element.edad <= 1) {
-        contBebes++;
-      } else if (element.edad === 2) {
-        contJovenes++;
-      } else {
-        contAdultos++;
+    if (cantidadMuestras > animales.length) {
+      console.log(`No tenemos la cantidad ingresada, tenemos solo ${animales.length} ${categoria}`);
+    } else {
+      console.log(`La cantidad total de ${categoria} son ${animales.length}  pero solo necesito ${cantidadMuestras} muestras`);
+      
+      // Reordenando el array de forma aleatoria
+      shuffle(animales);
+      for (let index = 0; index < cantidadMuestras; index++) {
+        if (animales[index].edad <= 1) {
+          contBebes++;
+        } else if (animales[index].edad === 2) {
+          contJovenes++;
+        } else {
+          contAdultos++;
+        }
       }
-    });
+    }
+
+    // console.log(animales);
+
+    // let index = 0;
+    // while (index < cantidadMuestras) {
+    //   if (animales[index].edad <= 1) {
+    //     contBebes++;
+    //   } else if (animales[index].edad === 2) {
+    //     contJovenes++;
+    //   } else {
+    //     contAdultos++;
+    //   }
+    //   console.log('index', index);
+    // index++;
+    // }
+
+    // animales.forEach((element: Animal, index: number) => {
+    //   if (index < cantidadMuestras) {
+    //     if (element.edad <= 1) {
+    //       contBebes++;
+    //     } else if (element.edad === 2) {
+    //       contJovenes++;
+    //     } else {
+    //       contAdultos++;
+    //     }
+    //   }
+    // });
 
     console.log('Cantidad bebes: ', contBebes);
     console.log('Cantidad jovenes: ', contJovenes);

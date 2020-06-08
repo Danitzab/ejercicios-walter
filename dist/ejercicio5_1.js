@@ -1,4 +1,3 @@
-"use strict";
 var Ejercicio5_1 = /** @class */ (function () {
     function Ejercicio5_1() {
         this.ejercicio5_1([3, 4, 3]);
@@ -20,3 +19,4 @@ var Ejercicio5_1 = /** @class */ (function () {
     return Ejercicio5_1;
 }());
 new Ejercicio5_1();
+//# sourceMappingURL=ejercicio5_1.js.map

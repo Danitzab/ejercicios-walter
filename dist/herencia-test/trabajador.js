@@ -10,3 +10,4 @@ var Trabajador = /** @class */ (function () {
     return Trabajador;
 }());
 exports.default = Trabajador;
+//# sourceMappingURL=trabajador.js.map

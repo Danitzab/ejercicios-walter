@@ -12,11 +12,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var trabajador_1 = __importDefault(require("./trabajador"));
+var trabajador_1 = require("./trabajador");
 var Avaluador = /** @class */ (function (_super) {
     __extends(Avaluador, _super);
     function Avaluador() {
@@ -37,3 +34,4 @@ var Avaluador = /** @class */ (function (_super) {
 }(trabajador_1.default));
 exports.default = Avaluador;
 new Avaluador();
+//# sourceMappingURL=avaluador.js.map

@@ -30,3 +30,4 @@ var Ejercicio10 = /** @class */ (function () {
     return Ejercicio10;
 }());
 new Ejercicio10();
+//# sourceMappingURL=ejercicio10.js.map

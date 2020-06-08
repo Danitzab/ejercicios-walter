@@ -1,4 +1,3 @@
-"use strict";
 var Ejercicio8 = /** @class */ (function () {
     function Ejercicio8() {
         this.ejercicio8([1, 3, 0, 5, 0, 1.6, 9]);
@@ -11,17 +10,17 @@ var Ejercicio8 = /** @class */ (function () {
         var notasTotales = 0;
         var promedioDeNotas = 0;
         var notaMinima = 0;
-        for (var i = 0; i < notas.length; i++) {
-            notasTotales += notas[i];
+        notas.forEach(function (element, i) {
+            notasTotales += element;
             if (i === 0) {
-                notaMinima = notas[i];
+                notaMinima = element;
             }
             else {
-                if (notas[i] < notaMinima) {
-                    notaMinima = notas[i];
+                if (element < notaMinima) {
+                    notaMinima = element;
                 }
             }
-        }
+        });
         promedioDeNotas = notasTotales / notas.length;
         console.log('La media de las notas de los estudiantes es: ', promedioDeNotas);
         console.log('La nota mas baja es:', notaMinima);
@@ -29,3 +28,6 @@ var Ejercicio8 = /** @class */ (function () {
     return Ejercicio8;
 }());
 new Ejercicio8();
+// for (let i = 0; i < notas.length; i++) {
+//   }
+//# sourceMappingURL=ejercicio8.js.map

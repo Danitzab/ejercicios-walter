@@ -1,13 +1,16 @@
-"use strict";
 var Ejercicio5 = /** @class */ (function () {
     function Ejercicio5() {
-        this.ejercicio5(3, 4, 3, 2, 1, 1, 5);
+        this.ejercicio5([3, 4, 3, 2, 1, 1, 5]);
     }
     /**5)	Calcular el promedio de un alumno que tiene 7 calificaciones en la materia de Diseño de Algoritmos */
-    Ejercicio5.prototype.ejercicio5 = function (calificacion1, calificacion2, calificacion3, calificacion4, calificacion5, calificacion6, calificacion7) {
-        var promedio = (calificacion1 + calificacion2 + calificacion3 + calificacion4 + calificacion5 + calificacion6 + calificacion7) / 7;
+    Ejercicio5.prototype.ejercicio5 = function (calificaciones) {
+        var promedio = 0;
+        calificaciones.forEach(function (element) {
+            promedio += element;
+        });
+        promedio = promedio / calificaciones.length;
         if (promedio < 3) {
-            console.log('Su promedio es : ' + promedio, 'No aprobo materia');
+            console.log('Su promedio es : ', promedio, 'No aprobo materia');
         }
         else {
             console.log('El promedio es: ', promedio, 'Aprobo materia');
@@ -16,3 +19,4 @@ var Ejercicio5 = /** @class */ (function () {
     return Ejercicio5;
 }());
 new Ejercicio5();
+//# sourceMappingURL=ejercicio5.js.map

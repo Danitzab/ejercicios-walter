@@ -18,7 +18,7 @@ var Ejercicio14 = /** @class */ (function () {
                 console.log("El pago semanal $" + pagoSemanal);
             }
             else {
-                var horasAdicionales = element % cantHorasLegales;
+                var horasAdicionales = element - cantHorasLegales;
                 pagoSemanal = (cantHorasLegales * valorHora) + (horasAdicionales * valorHoraExtra);
                 console.log("El pago semanal $" + pagoSemanal);
             }

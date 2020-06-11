@@ -18,7 +18,7 @@ class Ejercicio14 {
         pagoSemanal = valorHora * element;
         console.log(`El pago semanal $${pagoSemanal}`);
       } else {
-        const horasAdicionales = element % cantHorasLegales;
+        const horasAdicionales = element - cantHorasLegales;
         pagoSemanal = (cantHorasLegales * valorHora) + (horasAdicionales * valorHoraExtra);
         console.log(`El pago semanal $${pagoSemanal}`);
       }

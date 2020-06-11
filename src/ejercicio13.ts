@@ -39,8 +39,8 @@ class Ejercicio13 {
   ejercicio13(vendedores: vendedor[]): void {
     const sueldoBase = 890000;
     const comision = 0.1;
-    const ventaSemana = 3;
     let extra = 0;
+    // const ventaSemana = 3;
 
     // this.vendedores.forEach(element => {
     //     if (ventaSemana === element.sales) {

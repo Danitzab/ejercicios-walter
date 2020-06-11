@@ -12,8 +12,27 @@
  */
 var Ejercicio15 = /** @class */ (function () {
     function Ejercicio15() {
+        this.ejercicio15([1, 2, 5, 8, 6, 0, 7]);
     }
-    Ejercicio15.prototype.ejercicio15 = function () {
+    Ejercicio15.prototype.ejercicio15 = function (numeroPlaca) {
+        var ultimoNumeroPlaca = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        numeroPlaca.forEach(function (element) {
+            if (ultimoNumeroPlaca[element] === 1 || ultimoNumeroPlaca[element] === 2) {
+                console.log('Placa Amarilla');
+            }
+            else if (ultimoNumeroPlaca[element] === 3 || ultimoNumeroPlaca[element] === 4) {
+                console.log('Placa Rosa');
+            }
+            else if (ultimoNumeroPlaca[element] === 5 || ultimoNumeroPlaca[element] === 6) {
+                console.log('Placa Roja');
+            }
+            else if (ultimoNumeroPlaca[element] === 7 || ultimoNumeroPlaca[element] === 8) {
+                console.log('Placa Verde');
+            }
+            else if (ultimoNumeroPlaca[element] === 9 || ultimoNumeroPlaca[element] === 0) {
+                console.log('Placa Azul');
+            }
+        });
     };
     return Ejercicio15;
 }());

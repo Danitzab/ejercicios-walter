@@ -38,8 +38,8 @@ var Ejercicio13 = /** @class */ (function () {
     Ejercicio13.prototype.ejercicio13 = function (vendedores) {
         var sueldoBase = 890000;
         var comision = 0.1;
-        var ventaSemana = 3;
         var extra = 0;
+        // const ventaSemana = 3;
         // this.vendedores.forEach(element => {
         //     if (ventaSemana === element.sales) {
         //       extra = comision * sueldoBase;

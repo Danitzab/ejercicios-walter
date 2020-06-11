@@ -5,22 +5,22 @@
  */
 class Ejercicio14 {
   constructor() {
-    this.ejercicio14([45, 20]);
+    this.ejercicio14([55, 20, 75, 30, 40]);
   }
-
   ejercicio14(horasTrabajo: number[]): void {
     const pagoXHora = 20;
     const extra = 25;
     let pagoSemanal = 0;
 
     horasTrabajo.forEach((element) => {
-      if (element <= 40 || element > 40) {
+      const residuo = element % 40;
+      if (element <= 40) {
         pagoSemanal = pagoXHora * element;
         console.log(`El pago semanal $${pagoSemanal}`);
-      } else {
-        pagoSemanal = pagoXHora * element;
-        pagoSemanal = pagoSemanal + extra;
-        console.log(`El pago semanal $${pagoSemanal}`);
+      } else if (element > 40) {
+        pagoSemanal = element - residuo;
+        pagoSemanal *= pagoXHora;
+        console.log(`El pago semanal $${pagoSemanal + residuo * extra}`);
       }
     });
   }

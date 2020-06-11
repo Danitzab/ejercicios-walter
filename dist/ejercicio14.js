@@ -5,21 +5,22 @@
  */
 var Ejercicio14 = /** @class */ (function () {
     function Ejercicio14() {
-        this.ejercicio14([45, 20]);
+        this.ejercicio14([55, 20, 75, 30, 40]);
     }
     Ejercicio14.prototype.ejercicio14 = function (horasTrabajo) {
         var pagoXHora = 20;
         var extra = 25;
         var pagoSemanal = 0;
         horasTrabajo.forEach(function (element) {
-            if (element <= 40 || element > 40) {
+            var residuo = element % 40;
+            if (element <= 40) {
                 pagoSemanal = pagoXHora * element;
                 console.log("El pago semanal $" + pagoSemanal);
             }
-            else {
-                pagoSemanal = pagoXHora * element;
-                pagoSemanal = pagoSemanal + extra;
-                console.log("El pago semanal $" + pagoSemanal);
+            else if (element > 40) {
+                pagoSemanal = element - residuo;
+                pagoSemanal *= pagoXHora;
+                console.log("El pago semanal $" + (pagoSemanal + residuo * extra));
             }
         });
     };

@@ -12,27 +12,30 @@
  */
 var Ejercicio15 = /** @class */ (function () {
     function Ejercicio15() {
-        this.ejercicio15([1, 2, 5, 8, 6, 0, 7]);
+        this.ejercicio15([20, 15, 0, 2, 5, 8, 6, 0, 7]);
     }
     Ejercicio15.prototype.ejercicio15 = function (numeroPlaca) {
-        var ultimoNumeroPlaca = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-        numeroPlaca.forEach(function (element) {
-            if (ultimoNumeroPlaca[element] === 1 || ultimoNumeroPlaca[element] === 2) {
+        for (var i = 0; i < numeroPlaca.length; i++) {
+            if (numeroPlaca[i] === 1 || numeroPlaca[i] === 2) {
                 console.log('Placa Amarilla');
             }
-            else if (ultimoNumeroPlaca[element] === 3 || ultimoNumeroPlaca[element] === 4) {
+            else if (numeroPlaca[i] === 3 || numeroPlaca[i] === 4) {
                 console.log('Placa Rosa');
             }
-            else if (ultimoNumeroPlaca[element] === 5 || ultimoNumeroPlaca[element] === 6) {
+            else if (numeroPlaca[i] === 5 || numeroPlaca[i] === 6) {
                 console.log('Placa Roja');
             }
-            else if (ultimoNumeroPlaca[element] === 7 || ultimoNumeroPlaca[element] === 8) {
+            else if (numeroPlaca[i] === 7 || numeroPlaca[i] === 8) {
                 console.log('Placa Verde');
             }
-            else if (ultimoNumeroPlaca[element] === 9 || ultimoNumeroPlaca[element] === 0) {
+            else if (numeroPlaca[i] === 9 || numeroPlaca[i] === 0) {
                 console.log('Placa Azul');
             }
-        });
+            else {
+                console.log('Placa no encontrada');
+            }
+        }
+        console.log('El numero de vehiculos que ingreso fue de:', numeroPlaca.length);
     };
     return Ejercicio15;
 }());

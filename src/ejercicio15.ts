@@ -10,29 +10,28 @@
  * 7 o 8			verde
  * 9 o 0			azul
  */
-
 class Ejercicio15 {
   constructor() {
     this.ejercicio15([20, 15, 0, 2, 5, 8, 6, 0, 7]);
   }
 
-  ejercicio15(numeroPlaca: number[]): void {
-    for (let i = 0; i < numeroPlaca.length; i++) {
-      if (numeroPlaca[i] === 1 || numeroPlaca[i] === 2) {
+  ejercicio15(placas: number[]): void {
+    for (let i = 0; i < placas.length; i++) {
+      if (placas[i] === 1 || placas[i] === 2) {
         console.log('Placa Amarilla');
-      } else if (numeroPlaca[i] === 3 || numeroPlaca[i] === 4) {
+      } else if (placas[i] === 3 || placas[i] === 4) {
         console.log('Placa Rosa');
-      } else if (numeroPlaca[i] === 5 || numeroPlaca[i] === 6) {
+      } else if (placas[i] === 5 || placas[i] === 6) {
         console.log('Placa Roja');
-      } else if (numeroPlaca[i] === 7 || numeroPlaca[i] === 8) {
+      } else if (placas[i] === 7 || placas[i] === 8) {
         console.log('Placa Verde');
-      } else if (numeroPlaca[i] === 9 || numeroPlaca[i] === 0) {
+      } else if (placas[i] === 9 || placas[i] === 0) {
         console.log('Placa Azul');
       } else {
         console.log('Placa no encontrada');
       }
     }
-    console.log('El numero de vehiculos que ingreso fue de:', numeroPlaca.length);
+    console.log('El numero de vehiculos que ingreso fue de:', placas.length);
   }
 }
 
